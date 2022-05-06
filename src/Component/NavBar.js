@@ -17,12 +17,12 @@ export default function NavBar() {
           </div>
           <h1 className='logo'>&lt;/&gt;</h1>
           <ul id="menu">
-            <li className="navItem active"><a href="">Home</a></li>
-            <li className="navItem"><a href="">Projects</a></li>
-            <li className="navItem"><a href="">Skills</a></li>
-            <li className="navItem"><a href="">Resume</a></li>
-            <li className="navItem"><a href="">About Me</a></li>
-            <li className="navItem"><a href="">Contact Me</a></li>
+            <li className="navItem active"><a href="/">Home</a></li>
+            <li className="navItem"><a href="/project">Projects</a></li>
+            <li className="navItem"><a href="/skill">Skills</a></li>
+            <li className="navItem"><a href="/resume">Resume</a></li>
+            <li className="navItem"><a href="/about">About Me</a></li>
+            <li className="navItem"><a href="/contact">Contact Me</a></li>
           </ul>
       </nav>
     </>
