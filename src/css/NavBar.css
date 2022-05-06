@@ -1,0 +1,203 @@
+nav {
+    position: fixed;
+    padding: 2% 7.5%;
+    height: 80px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 13px;
+    background-color: transparent;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 52px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 30px;
+    transition: 0.5s;
+    padding-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: white;
+    transition: ease 0.5s;
+}
+
+nav a:hover,
+nav li.active a {
+    text-decoration: none;
+}
+
+nav li.active,
+nav li:hover {
+    border-bottom: 2px solid white;
+    font-size: 16px;
+}
+
+.navToggle {
+    display: none;
+    cursor: pointer;
+}
+
+.navToggle>span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    border-radius: 9999px;
+    background-color: white;
+}
+
+.navToggle>span:not(:last-child) {
+    margin-bottom: 7px;
+}
+
+.navToggle,
+.navToggle>span {
+    transition: all .4s ease-in-out;
+}
+
+.navToggle.active {
+    transition-delay: 0.5s;
+    transform: rotate(45deg);
+}
+
+.navToggle.active>span:nth-child(2) {
+    margin-bottom: 3.2px;
+    width: 0;
+}
+
+.navToggle.active>span:nth-child(1),
+.navToggle.active>span:nth-child(3) {
+    transition-delay: .4s;
+}
+
+.navToggle.active>span:nth-child(1) {
+    margin-bottom: 3.2px;
+    transform: translateY(9x);
+}
+
+.navToggle.active>span:nth-child(3) {
+    transform: translateY(-9px) rotate(90deg);
+}
+
+@media (max-width: 952px) {
+
+    .bg {
+        height: 100vh;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    nav ul li {
+        font-size: 16px;
+    }
+
+    .heading {
+        position: absolute;
+        right: 0%;
+        width: 50%;
+    }
+
+    .heading h2 {
+        font-size: 20px;
+    }
+
+    .bg {
+        background: none;
+        background-color: black;
+    }
+
+    img#laptop {
+        display: block;
+        height: 300px;
+        width: 300px;
+    }
+
+    #bg {
+        display: block;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@media (max-width:858px) {
+
+    .navToggle {
+        display: block;
+        z-index: 999;
+    }
+
+    .logo {
+        padding: 25px 20px 20px 20px;
+        z-index: 999;
+    }
+
+    nav {
+        width: 100%;
+        left: 0;
+        padding-bottom: 2%;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding-top: 70px;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        overflow-y: scroll;
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    nav a:hover,
+    nav a.active {
+        border-bottom: 2px solid white;
+        font-size: 15px;
+    }
+
+    .navToggle.active~ul {
+        left: 0;
+    }
+
+}
+
+@media (max-width:500px) {
+
+    .logo {
+        font-size: 30px;
+        color: rgb(99, 96, 96);
+    }
+
+}

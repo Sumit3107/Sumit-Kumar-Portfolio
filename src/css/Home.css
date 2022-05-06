@@ -1,0 +1,147 @@
+.bg {
+    background-color: black;
+    background-image: url("../images/bg.png"), url('../images/bg.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#bg {
+    display: none;
+}
+
+.heading {
+    position: absolute;
+    right: 8%;
+    width: 600px;
+}
+
+.heading h2 span {
+    color: rgb(73, 71, 71);
+}
+
+.heading h2 {
+    font-size: 52px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.heading .fullDiv {
+    width: max-content;
+}
+
+.heading .full {
+    overflow: hidden;
+    border-right: 2px solid rgb(252, 250, 248);
+    animation: typewriter 4s steps(54) 1s 1 normal both,
+        blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+.heading h2.dev {
+    overflow: hidden;
+    text-align: right;
+}
+
+img#laptop {
+    margin: 12px auto 18px auto;
+    display: block;
+    height: 300px;
+    width: 500px;
+
+}
+
+@keyframes typewriter {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@media (max-width: 952px) {
+
+    .bg {
+        height: 100vh;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .heading {
+        position: absolute;
+        right: 0%;
+        width: 50%;
+    }
+
+    .heading h2 {
+        font-size: 20px;
+    }
+
+    .bg {
+        background: url('../images/bg.svg');
+        background-color: black;
+    }
+
+    img#laptop {
+        display: block;
+        height: 300px;
+        width: 300px;
+    }
+
+    #bg {
+        display: block;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@media (max-width:858px) {
+
+    .bg img {
+        display: block;
+        width: 50%;
+        height: 100%;
+    }
+
+    .heading h2 {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width:500px) {
+
+    .bg{
+        background: url('../images/bg.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    img#laptop {
+        display: block;
+        height: 100px;
+        width: 100px;
+    }
+
+    .heading h2 {
+        font-size: 20px;
+    }
+
+}
